@@ -16,7 +16,7 @@ echo "
         Group=$USER
         LimitNOFILE=4096
         WorkingDirectory=/home/$USER/validator
-        ExecStart=polygon-edge server --data-dir /home/$USER/validator/data --chain /home/$USER/validator/genesis.json --libp2p 0.0.0.0:1478  --nat $EC2_PUBLIC_IP --seal
+        ExecStart=polygon-edge server --data-dir /home/$USER/validator/data --chain /home/$USER/validator/genesis.json --libp2p 0.0.0.0:1478  --nat $EC2_PUBLIC_IP --seal --price-limit 0
         [Install]
         WantedBy=multi-user.target
 " | sudo tee blockchain.service

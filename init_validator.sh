@@ -21,6 +21,6 @@ sudo mv polygon-edge /usr/local/bin
 # Initialize validator dir
 echo "Initializing validator directory.."
 
-rm -rf data
+/home/$USER/validator && rm -rf data
 polygon-edge secrets init --data-dir data
 echo
